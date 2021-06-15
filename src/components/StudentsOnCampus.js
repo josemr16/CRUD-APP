@@ -1,4 +1,4 @@
-
+import '../styles/StudentsOnCampus.css';
 function StudentsOnCampus(props){
 
 	let component;
