@@ -1,15 +1,17 @@
+import '../styles/Navbar.css';
+
 function Navbar(props){
 
 
 	return(
-		<div>
-			<div>
+		<div className = 'container'>
+			<div className='nav-margin'>
 				<span>
 					Home
 				</span>
 			</div>
 			<div>
-				<ul>
+				<ul className='nav-btn'>
 					<li>Campuses</li>
 					<li>Students</li>
 				</ul>

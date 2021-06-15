@@ -1,0 +1,27 @@
+
+.container{
+	background-color: #b3b2af;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0px;
+	
+}
+
+.nav-btn{
+	list-style: none;
+
+}
+
+li {
+	display: inline-block;
+	margin-right: 25px;
+	cursor: pointer;
+}
+
+.nav-margin {
+	margin: 1% 2%;
+}
+
+span {
+	cursor: pointer;
+}
