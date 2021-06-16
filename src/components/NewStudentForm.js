@@ -1,4 +1,4 @@
-
+import '../styles/NewStudentForm.css';
 function NewStudent(props){
 
 	return(
