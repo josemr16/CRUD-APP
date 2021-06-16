@@ -1,4 +1,6 @@
 import '../styles/StudentsOnCampus.css';
+import StudentCardList from './StudentCardList';
+
 function StudentsOnCampus(props){
 
 	let component;
