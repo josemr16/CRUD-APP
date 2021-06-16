@@ -12,7 +12,7 @@ import 'tachyons';
 
 ReactDOM.render(
   <React.StrictMode>
-    <NewCampusForm/>
+    <CampusEdit/>
    
   </React.StrictMode>,
   document.getElementById('root')
