@@ -1,0 +1,18 @@
+.border{
+    background-color: grey;
+    border-style: solid;
+    margin: 100px 400px;
+    padding: 50px 100px;
+}
+.input-info{
+    font-size: 20px;
+    font-weight: bold;
+    /* float: none;
+    width: auto;
+    border: 0 none #FFF;
+    padding-left: 12em; */
+}
+.save-changes-btn{
+
+    background-color: lightskyblue;
+}

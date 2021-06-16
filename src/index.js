@@ -4,10 +4,15 @@ import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Navbar from './components/Navbar';
+import Campuses from './components/Campuses';
+import CampusList from './components/CampusList';
+import CampusEdit from './components/CampusEdit';
+import NewCampusForm from './components/NewCampusForm';
+import 'tachyons';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Navbar />
+    <NewCampusForm/>
    
   </React.StrictMode>,
   document.getElementById('root')

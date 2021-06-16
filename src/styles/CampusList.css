@@ -1,0 +1,13 @@
+.edit-button{
+    background-color:yellowgreen;
+    margin: 0px 10px;
+}
+.delete-button{
+    background-color: firebrick;
+}
+.column-parent{
+    /* display:inline-table; */
+    content: "";
+    display: table;
+    clear: both;
+}
