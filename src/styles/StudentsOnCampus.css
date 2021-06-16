@@ -1,0 +1,43 @@
+
+.soc-title-btn{
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 70px;
+}
+
+.soc-title{
+	font-size: 60px;
+	font-family: 'Calibri';
+	font-weight: normal;
+
+}
+
+.add-btn{
+	width: 220px;
+	height: 60px;
+	text-align: center;
+	margin-top: 45px;
+	border-radius: 20px;
+	font-size: 20px;
+	color: white;
+	background-color: #45b8ed;
+	border: 0px solid #45b8ed;
+	font-weight: bold;
+}
+
+.add-btn:hover {
+	background-color: #3f88e8;
+}
+
+.tc {
+	text-align: center;
+}
+
+.no-stu-label{
+	border: 1px solid black;
+}
+
+.center-btn-soc{
+	display: block;
+	margin: 50px auto;
+}

@@ -9,11 +9,12 @@ function StudentsOnCampus(props){
 
 		component = (
 			<div>
-
-				<h1>Students on campus</h1>  
-				<button>Add Students</button>
-				<StudentCardList />
-
+				<div className='soc-title-btn'>
+					<h1 className='soc-title'>Students on campus</h1>  
+					<button className='add-btn'>Add Students</button>
+				</div>
+					<StudentCardList students = {props.students}/>
+				
 			</div>
 		);
 
@@ -23,9 +24,9 @@ function StudentsOnCampus(props){
 		component = (
 			<div>
 
-				<h1>Students on campus</h1>  
-				<span>There are no students currently registered to this campus.</span>
-				<button>Add Students</button>
+				<h1 className='soc-title tc'>Students on campus</h1>  
+				<p className='tc'>There are no students currently registered to this campus.</p>
+				<button className='add-btn center-btn-soc'>Add Students</button>
 
 			</div>
 		)

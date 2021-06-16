@@ -1,20 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import StudentCard from './components/StudentCard';
 import reportWebVitals from './reportWebVitals';
-// import {robots} from './robots';
-import StudentCardList from './components/StudentCardList';
-import AllStudents from './components/AllStudents';
+import {robots} from './robots';
+// import StudentCard from './components/StudentCard';
+// import StudentCardList from './components/StudentCardList';
+// import AllStudents from './components/AllStudents';
+import StudentsOnCampus from './components/StudentsOnCampus';
 import Navbar from './components/Navbar';
 
-let robots = [];
+// let robots = [];
 
 ReactDOM.render(
   <React.StrictMode>
     <Navbar />
 
-    <AllStudents students = {robots} />
+    <StudentsOnCampus students = {robots} />
+    
     
    
   </React.StrictMode>,
