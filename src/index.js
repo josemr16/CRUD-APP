@@ -2,23 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import {robots} from './robots';
+// import {robots} from './robots';
 // import StudentCard from './components/StudentCard';
 // import StudentCardList from './components/StudentCardList';
 // import AllStudents from './components/AllStudents';
-import StudentsOnCampus from './components/StudentsOnCampus';
+// import StudentsOnCampus from './components/StudentsOnCampus';
+import ShowStudent from './components/ShowStudent';
 import Navbar from './components/Navbar';
 
 // let robots = [];
+let student = {isOnCampus:true}
 
 ReactDOM.render(
   <React.StrictMode>
     <Navbar />
 
-    <StudentsOnCampus students = {robots} />
-    
-    
-   
+    <ShowStudent student = {student}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
