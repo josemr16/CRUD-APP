@@ -1,0 +1,16 @@
+/*
+.cardlist-container{
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	margin-left: 50px;
+	grid-gap: 10px;
+	
+
+}*/
+
+.cardlist-container{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px 60px;
+	
+}

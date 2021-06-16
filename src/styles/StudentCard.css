@@ -1,5 +1,5 @@
 .card-img{
-	width: 90%;
+	width: 180px;
 	height: 150px;
 	display: block;
 	margin: auto;
@@ -7,15 +7,16 @@
 
 .card-container{
 	border-radius: 5px;
-	width: 17%;
-	background-color: #c9d9f2;
+	width: 200px;
+	background-color: #e6e8e8;
 	padding: 5px 0px;
+	margin: 10px;
 
 }
 
 .card-label{
 	display: block;
-	margin: 5px 5% ;
+	margin: 5px 10px ;
 
 }
 .stu-name{

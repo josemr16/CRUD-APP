@@ -3,12 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import StudentCard from './components/StudentCard';
 import reportWebVitals from './reportWebVitals';
-// import Navbar from './components/Navbar';
+// import {robots} from './robots';
+import StudentCardList from './components/StudentCardList';
+import AllStudents from './components/AllStudents';
+import Navbar from './components/Navbar';
+
+let robots = [];
 
 ReactDOM.render(
   <React.StrictMode>
-    {/*<Navbar />*/}
-    <StudentCard />
+    <Navbar />
+
+    <AllStudents students = {robots} />
+    
    
   </React.StrictMode>,
   document.getElementById('root')
