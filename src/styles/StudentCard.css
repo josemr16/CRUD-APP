@@ -1,0 +1,23 @@
+.card-img{
+	width: 90%;
+	height: 150px;
+	display: block;
+	margin: auto;
+}
+
+.card-container{
+	border-radius: 5px;
+	width: 17%;
+	background-color: #c9d9f2;
+	padding-bottom: 5px;
+
+}
+
+.card-label{
+	display: block;
+	margin: 5px 5% ;
+
+}
+.stu-name{
+	font-size: 20px;
+}
