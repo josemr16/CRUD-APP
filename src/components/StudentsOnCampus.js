@@ -10,7 +10,7 @@ function StudentsOnCampus(props){
 
 				<h1>Students on campus</h1>  
 				<button>Add Students</button>
-				<StudentsCardList />
+				<StudentCardList />
 
 			</div>
 		);
