@@ -1,6 +1,22 @@
 import StudentCardList from './StudentCardList';
 import '../styles/AllStudents.css';
 
+// import {robots} from './robots';
+// import StudentCard from './components/StudentCard';
+// import StudentCardList from './components/StudentCardList';
+// import AllStudents from './components/AllStudents';
+// import NewStudent from './components/NewStudentForm';
+// import EditStudent from './components/EditStudentForm';
+// import StudentsOnCampus from './components/StudentsOnCampus';
+// import ShowStudent from './components/ShowStudent';
+// import StudentRow from './components/StudentRow';
+// import StudentRowList from './components/StudentRowList';
+// import Navbar from './components/Navbar';
+
+let robots2 = [];
+let student = {isOnCampus:false}
+let student2 = {isOnCampus:true}
+
 function AllStudents(props){
 
 	let component;
