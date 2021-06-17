@@ -5,22 +5,17 @@ function Navbar(props){
 
 
 	return(
-		<div className = 'container'>
-			<div className='nav-margin'>
-				<span>
-					Home
-				</span>
+		<div className = 'nav-container'>
+			<div>
+				<a href="#"><h4 className='home-btn'>Home</h4></a>
 			</div>
 			<div>
-				<ul className='nav-btn'>
-					<li>Campuses</li>
-					<li>Students</li>
-				</ul>
+				<a href="#"><h4 className='campus-link'>Campuses</h4></a>
+			</div>
+			<div>
+				<a href="#"><h4 classname='student-link'>Students</h4></a>
 			</div>
 		</div>
-
 	);
-
-
 }
 export default Navbar;
