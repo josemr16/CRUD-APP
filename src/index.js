@@ -9,12 +9,13 @@ import CampusList from './components/CampusList';
 import CampusEdit from './components/CampusEdit';
 import NewCampusForm from './components/NewCampusForm';
 import NoCampusRegistered from './components/NoCampusRegistered';
+import CampusNoStudents from './components/CampusNoStudents';
 import 'tachyons';
 
 ReactDOM.render(
   <React.StrictMode>
     <Navbar/>
-    <NewCampusForm/>
+    <CampusNoStudents/>
    
   </React.StrictMode>,
   document.getElementById('root')
