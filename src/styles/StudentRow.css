@@ -1,0 +1,48 @@
+
+.stu-row-container{
+	background-color: #e6e8e8;
+	display: block;
+	margin: 10px auto;
+	width: 800px;
+	border-radius: 5px;
+	position: relative;
+}
+
+
+
+.stu-row-img{
+	width: 130px;
+	height: 100px;
+	/*display: block;*/
+	margin: 5px;
+}
+
+.stu-row-title{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	margin-top: 0px;
+}
+
+.stu-row-btn{
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 5px 5px;
+	height: 30px;
+	border-style: none;
+	background-color: #d9796c;
+}
+
+.stu-row-btn:hover{
+	background-color: #d19e97;
+}
+
+
+
+
+
+
+
+
