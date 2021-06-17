@@ -26,9 +26,9 @@ function ShowStudent(props){
 							<p>Campus Card goes here</p>
 						</div>
 						<div className='soc-show-stu-items'>
-							<select className='show-stu-sl'>
+							<select defaultValue ='default' className='show-stu-sl'>
 
-								<option disabled selected hidden>Select  a  campus . . .</option>
+								<option disabled value='default' hidden>Select  a  campus . . .</option>
 
 							</select>
 							<button className='soc-show-stu-btn'>Change Campus</button>
@@ -61,9 +61,9 @@ function ShowStudent(props){
 					<div className='snoc-show-stu-container'>
 						<div className='center'>
 
-						<select className='show-stu-sl'>
+						<select defaultValue ='default' className='show-stu-sl'>
 
-							<option disabled selected hidden>Select  a  campus . . .</option>
+							<option disabled value='default' hidden>Select  a  campus . . .</option>
 
 						</select>
 						<button className='snoc-show-stu-btn'>Add Campus</button>
