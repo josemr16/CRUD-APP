@@ -1,4 +1,5 @@
 .card-container{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border-style: solid;
     background-color:ghostwhite;
     padding: 70px;
@@ -21,13 +22,13 @@
 .card-container > label{
     font-size: 20px;
     font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .card-title{
     text-align: center;
     font-stretch: wider;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size:60px;
     padding-top: 10px;
     padding-bottom: 50px;
@@ -37,23 +38,35 @@
     padding: 10px;
     text-align: center;
 }
+.save-changes-btn:hover{
+    background-color: #3F88E8;
+}
 
 .save-changes-btn{
-  margin-top: 50px;
-    padding: 10px;
-    background-color: lightskyblue;
+    border-radius: 40px; 
+    border:0px;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #45B8ED;
     font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.add-student:hover{
+  background-color: #3F88E8;
 }
 
 .add-student{
-    font-family: 'Times New Roman', Times, serif;
+    border-radius: 40px; 
+    background-color: #45B8ED;
+    border:0px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 14px;
     margin-left: 60px;
 }
 
 .dropbtn {
-    background-color: #2a990f;
+    background-color: #3DBA42;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -86,4 +99,4 @@
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #53bcc5;}
+.dropdown:hover .dropbtn {background-color: #3F88E8;}

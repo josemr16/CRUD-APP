@@ -9,12 +9,12 @@
     justify-items: center;
 }
 .ncf-header{
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-bottom: 200px;
     font-size: 35px;
 }
 .form-campus-name{
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-bottom: 50px;
 }
 
@@ -23,10 +23,15 @@
     margin-bottom: 50px;
 }
 
+.form-add-button:hover{
+    background-color: #3F88E8;
+}
+
 .form-add-button{
-    font-family: 'Times New Roman', Times, serif;
-    background-color: mediumturquoise;
-    border-radius: 40px; 
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:  #45B8ED;
+    border-radius: 40px;
+    border:0px; 
     padding: 20px;
     margin-bottom: 310px;
 }

@@ -23,19 +23,11 @@ function CampusNoStudents(props){
                 <p className='cns-address'>2063 Bartow Avenue, Bronx, NY 10475</p>
             </div>
 
-            <div>
+            <div className="cns-btn-container">
                 <button className='cns-edit-btn'>Edit</button>
                 <button className='cns-delete-btn'>Delete</button>
             </div>
-
-            <div>
-                <h2 className='cns-student-location'>Students on Campus</h2>
-            </div>
-
-            <h3 className='cns-display-message'>There are no students currently registered to this campus.</h3>
-
-            <button className='cns-add-students-btn'>Add Students</button>
-        </div>
+       </div>
     );
 }
 export default CampusNoStudents;

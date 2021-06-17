@@ -10,21 +10,26 @@
 }
 
 .ncr-all-campus-title{
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-bottom: 50px;
 }
 .ncr-display{
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+.ncr-add-campus-btn:hover{
+    background-color: #3F88E8;
+}
+
 .ncr-add-campus-btn{
-    font-family: 'Times New Roman', Times, serif;
-    background-color: mediumturquoise;
+    border:0px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:  #45B8ED;
     border-radius: 40px; 
     padding: 20px;
     margin-bottom: 290px;
 }
 .ncr-header{
     padding-bottom: 200px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
 }
