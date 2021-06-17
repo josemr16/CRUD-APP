@@ -1,0 +1,53 @@
+.campuslist-container{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-style: solid ;
+    background: rgb(231, 231, 231);
+    background-color: solid black;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 32% 65%;
+    grid-auto-rows: minmax(50px, auto);
+    grid-gap:20px;
+    width: 25%;
+    height: 220px;
+}
+.campus-name{
+    margin: auto;
+    font-size: 30px;
+    text-align:left;
+}
+
+.building-image{
+	width: 150px;
+	height: 180px;
+
+}
+
+.count-students{
+    margin-top: -3px;;
+}
+
+.cardlist-edit-button:hover{
+    background-color: #86D189;
+}
+
+.cardlist-edit-button{
+    border-radius: 40px; 
+    border:0px;
+    margin-top: 60px;
+    margin-left: 25px;
+    padding: 5px 12px;
+    background-color:#3DBA42;
+}
+
+.cardlist-delete-button:hover{
+    background-color: #D19E97
+}
+
+.cardlist-delete-button{
+    border-radius: 40px; 
+    border:0px;
+    margin-left: 120px;
+    padding: 5px 12px;
+    background-color:#D9796C;
+}
