@@ -11,7 +11,7 @@ function StudentsOnCampus(props){
 			<div>
 				<div className='soc-title-btn'>
 					<h1 className='soc-title'>Students on campus</h1>  
-					<button className='add-btn'>Add Students</button>
+					<button className='soc-add-btn'>Add Students</button>
 				</div>
 					<StudentCardList students = {props.students}/>
 				
@@ -26,7 +26,7 @@ function StudentsOnCampus(props){
 
 				<h1 className='snoc-title'>Students on campus</h1>  
 				<p className='tc'>There are no students currently registered to this campus.</p>
-				<button className='add-btn center-btn-soc'>Add Students</button>
+				<button className='soc-add-btn center-btn-soc'>Add Students</button>
 
 			</div>
 		)
