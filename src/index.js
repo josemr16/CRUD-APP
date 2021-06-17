@@ -15,7 +15,14 @@ import 'tachyons';
 ReactDOM.render(
   <React.StrictMode>
     <Navbar/>
+    <AllCampuses/>
+    <CampusList/>
+    <CampusEdit/>
+    <NewCampusForm/>
+    <NoCampusRegistered/>
     <CampusNoStudents/>
+
+
    
   </React.StrictMode>,
   document.getElementById('root')

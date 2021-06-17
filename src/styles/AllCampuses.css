@@ -3,6 +3,7 @@
     padding-bottom: 100px;
     display: grid;
     justify-content: space-between;
+    border-style: solid;
 }
 
 .all-campus-title{
