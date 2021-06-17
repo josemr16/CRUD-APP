@@ -1,0 +1,68 @@
+
+.new-stu-title{
+	text-align: center;
+	font-family: 'calibri';
+	font-size: 50px;
+	margin-bottom: 80px;
+}
+
+
+.new-stu-label{
+	width: 200px;
+	display: inline-block;
+	/*border: 1px solid black;*/
+	text-align: right;
+	margin-right: 10px;
+	font-size: 20px;
+}
+
+.new-stu-btn{
+	width: 200px;
+	height: 45px;
+	display: block;
+	margin: auto;
+	font-size: 20px;
+	color: white;
+	background-color: #45b8ed;
+	border: 0px solid #45b8ed;
+	font-weight: bold;
+	border-radius: 15px;
+
+}
+
+.new-stu-btn:hover{
+	background-color: #3f88e8;
+	
+
+}
+
+.new-stu-div {
+	margin: 30px 5px;
+}
+
+.new-stu-input{
+	width: 300px;
+	height: 30px;
+	font-size: 18px;
+}
+
+.new-stu-container{
+	width: 600px;
+	margin: 100px auto;
+	/*border: 1px solid black;*/
+	/*display: flex;
+	justify-content: center;*/
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

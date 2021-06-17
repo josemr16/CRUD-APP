@@ -6,18 +6,19 @@ import reportWebVitals from './reportWebVitals';
 // import StudentCard from './components/StudentCard';
 // import StudentCardList from './components/StudentCardList';
 // import AllStudents from './components/AllStudents';
+import NewStudent from './components/NewStudentForm';
 // import StudentsOnCampus from './components/StudentsOnCampus';
-import ShowStudent from './components/ShowStudent';
+// import ShowStudent from './components/ShowStudent';
 import Navbar from './components/Navbar';
 
-// let robots = [];
+let robots = [];
 let student = {isOnCampus:true}
 
 ReactDOM.render(
   <React.StrictMode>
     <Navbar />
 
-    <ShowStudent student = {student}/>
+    <NewStudent />
   </React.StrictMode>,
   document.getElementById('root')
 );

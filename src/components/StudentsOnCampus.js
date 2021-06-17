@@ -24,7 +24,7 @@ function StudentsOnCampus(props){
 		component = (
 			<div>
 
-				<h1 className='soc-title tc'>Students on campus</h1>  
+				<h1 className='snoc-title'>Students on campus</h1>  
 				<p className='tc'>There are no students currently registered to this campus.</p>
 				<button className='add-btn center-btn-soc'>Add Students</button>
 
