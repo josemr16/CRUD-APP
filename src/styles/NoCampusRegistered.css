@@ -1,32 +1,30 @@
-.form-container{
+.ncr-container{
     background-color: ghostwhite;
     margin: auto;
-    width: 60%;
+    width: 63%;
     border-style: solid;
     padding: 0px 400px;
     text-align: center;
     display: grid;
     justify-items: center;
 }
-.ncf-header{
-    font-family: 'Times New Roman', Times, serif;
-    padding-bottom: 200px;
-    font-size: 35px;
-}
-.form-campus-name{
+
+.ncr-all-campus-title{
     font-family: 'Times New Roman', Times, serif;
     padding-bottom: 50px;
 }
-
-.form-input-field{
-    width: 400px;
-    margin-bottom: 50px;
+.ncr-display{
+    font-family: 'Times New Roman', Times, serif;
 }
-
-.form-add-button{
+.ncr-add-campus-btn{
     font-family: 'Times New Roman', Times, serif;
     background-color: mediumturquoise;
     border-radius: 40px; 
     padding: 20px;
-    margin-bottom: 310px;
+    margin-bottom: 290px;
+}
+.ncr-header{
+    padding-bottom: 200px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
 }

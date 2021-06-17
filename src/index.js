@@ -8,6 +8,7 @@ import AllCampuses from './components/AllCampuses';
 import CampusList from './components/CampusList';
 import CampusEdit from './components/CampusEdit';
 import NewCampusForm from './components/NewCampusForm';
+import NoCampusRegistered from './components/NoCampusRegistered';
 import 'tachyons';
 
 ReactDOM.render(
