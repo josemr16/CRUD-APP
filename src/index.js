@@ -2,14 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-// import {robots} from './robots';
+import {robots} from './robots';
 // import StudentCard from './components/StudentCard';
 // import StudentCardList from './components/StudentCardList';
 // import AllStudents from './components/AllStudents';
 // import NewStudent from './components/NewStudentForm';
 // import StudentsOnCampus from './components/StudentsOnCampus';
 // import ShowStudent from './components/ShowStudent';
-import StudentRow from './components/StudentRow';
+// import StudentRow from './components/StudentRow';
+import StudentRowList from './components/StudentRowList';
 import Navbar from './components/Navbar';
 
 // let robots = [];
@@ -19,7 +20,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Navbar />
 
-    <StudentRow />
+    <StudentRowList students = {robots} />
   </React.StrictMode>,
   document.getElementById('root')
 );
