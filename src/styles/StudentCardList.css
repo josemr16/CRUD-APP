@@ -11,6 +11,7 @@
 .cardlist-container{
 	display: flex;
 	flex-wrap: wrap;
+	/*justify-content: center;*/
 	margin: 0px 60px;
 	
 }
