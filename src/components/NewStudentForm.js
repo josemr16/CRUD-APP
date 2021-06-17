@@ -21,19 +21,19 @@ class NewStudent extends Component{
 					<h1 className='new-stu-title'>New student form</h1>
 					<div className='new-stu-div'>
 
-						<label className = 'new-stu-label' HTMLfor='studentname'>Student Name</label>
+						<label className = 'new-stu-label' htmlFor='studentname'>Student Name</label>
 						<input className = 'new-stu-input' type='text' name='studentname' />
 
 					</div>
 					<div className='new-stu-div' >
 
-						<label className = 'new-stu-label' HTMLfor='gpa'>GPA</label>
+						<label className = 'new-stu-label' htmlFor='gpa'>GPA</label>
 						<input className = 'new-stu-input' type='text' name='gpa' />
 
 					</div>
 					<div className='new-stu-div'>
 
-						<label className = 'new-stu-label' HTMLfor='studenturl'>Student URL</label>
+						<label className = 'new-stu-label' htmlFor='studenturl'>Student URL</label>
 						<input className = 'new-stu-input' type='text' name='studenturl' />
 
 					</div>
