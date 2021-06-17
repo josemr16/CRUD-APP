@@ -4,26 +4,10 @@ import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Navbar from './components/Navbar';
-import AllCampuses from './components/AllCampuses';
-import CampusList from './components/CampusList';
-import CampusEdit from './components/CampusEdit';
-import NewCampusForm from './components/NewCampusForm';
-import NoCampusRegistered from './components/NoCampusRegistered';
-import CampusNoStudents from './components/CampusNoStudents';
-import 'tachyons';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Navbar/>
-    
-    <AllCampuses/>
-    <CampusNoStudents/>
-    <CampusList/>
-    <CampusEdit/>
-    <NewCampusForm/>
-    <NoCampusRegistered/>
-
-
+    <Navbar />
    
   </React.StrictMode>,
   document.getElementById('root')
