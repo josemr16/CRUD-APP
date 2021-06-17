@@ -4,7 +4,7 @@ import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Navbar from './components/Navbar';
-import Campuses from './components/Campuses';
+import AllCampuses from './components/AllCampuses';
 import CampusList from './components/CampusList';
 import CampusEdit from './components/CampusEdit';
 import NewCampusForm from './components/NewCampusForm';
@@ -13,7 +13,7 @@ import 'tachyons';
 ReactDOM.render(
   <React.StrictMode>
     <Navbar/>
-    <CampusEdit/>
+    <NewCampusForm/>
    
   </React.StrictMode>,
   document.getElementById('root')

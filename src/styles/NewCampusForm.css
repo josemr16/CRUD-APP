@@ -1,6 +1,25 @@
-.input-field{
-    display: flex;
+.form-container{
+    background-color: ghostwhite;
+    margin: auto;
+    width: 60%;
+    border-style: solid;
+    padding: 400px 400px;
+    text-align: center;
+    display: grid;
+    justify-items: center;
 }
-.header{
-    margin: 200px;
+.form-campus-name{
+    padding-bottom: 50px;
+}
+
+.form-input-field{
+    width: 400px;
+    margin-bottom: 50px;
+}
+
+.form-add-button{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: mediumturquoise;
+    border-radius: 40px; 
+    padding: 20px;
 }

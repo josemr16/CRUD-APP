@@ -2,12 +2,10 @@ import '../styles/NewCampusForm.css';
 
 function NewCampusForm(props){
     return(
-        <div>
-            <h1 id='header'className="tc">Campus Name</h1>
-            <br/>
-            <input className="input-field" type="text"></input>
-            
-
+        <div className='form-container'>
+            <h1 className="form-campus-name">CAMPUS NAME</h1>
+            <input className="form-input-field" type="text"></input>
+            <button className='form-add-button'>ADD CAMPUS</button>
         </div>
     );
 }
