@@ -1,13 +1,33 @@
-.edit-button{
-    background-color:yellowgreen;
-    margin: 0px 10px;
+.campuslist-container{
+    border-style: solid ;
+    background: rgb(231, 231, 231);
+    background-color: solid black;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 32% 65%;
+    grid-auto-rows: minmax(50px, auto);
+    grid-gap:20px;
+    width: 25%;
+    height: 220px;
 }
-.delete-button{
-    background-color: firebrick;
+.campus-name{
+    margin: auto;
+    font-size: 30px;
+    text-align:left;
 }
-.column-parent{
-    /* display:inline-table; */
-    content: "";
-    display: table;
-    clear: both;
+
+.building-image{
+	width: 150px;
+	height: 180px;
+
+}
+.cardlist-edit-button{
+    margin-top: 60px;
+    padding: 0px 10px;
+    background-color:limegreen;
+}
+.cardlist-delete-button{
+    margin-left: 160px;
+    padding: 0px 10px;
+    background-color:rgb(221, 51, 51);
 }

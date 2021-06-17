@@ -12,6 +12,7 @@ import 'tachyons';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Navbar/>
     <CampusEdit/>
    
   </React.StrictMode>,

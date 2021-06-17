@@ -1,26 +1,36 @@
 .card-container{
-    background: rgb(180, 180, 180);
-    background-color: solid black;
-    padding: 1em;
+    border-style: solid;
+    background-color:ghostwhite;
+    padding: 70px;
     display: grid;
-    grid-template-columns: 25% 65%;
-    grid-auto-rows: minmax(50px, auto);
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: minmax(50px 50px);
     grid-gap: 15px;
-    width: 50%;
-    height: 300px;
+    width: 80%;
+    height: 400px;
     margin: auto;
+}
+
+.card-edit-border{
+  padding: 100px;
+  margin: 0px 400px;
+  background-color: rgb(190, 190, 190);
+  border-style: solid;
 }
 
 .card-container > label{
     font-size: 20px;
     font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .card-title{
     text-align: center;
-    font-size:40px;
-    padding-top: 50px;
-    padding-bottom: 80px;
+    font-stretch: wider;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:60px;
+    padding-top: 10px;
+    padding-bottom: 50px;
 }
 
 .edit-info{
@@ -29,18 +39,21 @@
 }
 
 .save-changes-btn{
+  margin-top: 50px;
     padding: 10px;
     background-color: lightskyblue;
     font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .add-student{
+    font-family: 'Times New Roman', Times, serif;
     padding: 14px;
     margin-left: 60px;
 }
 
 .dropbtn {
-    background-color: #b32c0b;
+    background-color: #2a990f;
     color: white;
     padding: 16px;
     font-size: 16px;

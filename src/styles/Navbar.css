@@ -9,6 +9,7 @@
 
 .nav-btn{
 	list-style: none;
+	font-family: 'Times New Roman', Times, serif;
 
 }
 
@@ -19,6 +20,7 @@ li {
 }
 
 .nav-margin {
+	font-family: 'Times New Roman', Times, serif;
 	margin: 1% 2%;
 }
 
