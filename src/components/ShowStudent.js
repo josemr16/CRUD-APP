@@ -13,8 +13,8 @@ function ShowStudent(props){
 						<h1>Student name</h1>
 						<span>GPA: 3.4</span>
 						<div className='show-stu-btns'>
-							<button className='show-stu-btn show-stu-edit'>edit</button>
-							<button className='show-stu-btn show-stu-del'>delete</button>
+							<button onClick = {props.onEditClick} className='show-stu-btn show-stu-edit'>edit</button>
+							<button onClick = {props.onDeleteClick} className='show-stu-btn show-stu-del'>delete</button>
 						</div>
 					</div>
 				</div>
@@ -31,7 +31,7 @@ function ShowStudent(props){
 								<option disabled value='default' hidden>Select  a  campus . . .</option>
 
 							</select>
-							<button className='soc-show-stu-btn'>Change Campus</button>
+							<button onClick = {props.onChangeCampusClick}className='soc-show-stu-btn'>Change Campus</button>
 						</div>
 					</div>
 				</div>
@@ -50,8 +50,8 @@ function ShowStudent(props){
 						<h1>Student name</h1>
 						<span>GPA: 3.4</span>
 						<div className='show-stu-btns'>
-							<button className='show-stu-btn show-stu-edit'>edit</button>
-							<button className='show-stu-btn show-stu-del'>delete</button>
+							<button onClick = {props.onEditClick} className='show-stu-btn show-stu-edit'>edit</button>
+							<button onClick = {props.onDeleteClick} className='show-stu-btn show-stu-del'>delete</button>
 						</div>
 					</div>
 				</div>
@@ -66,7 +66,7 @@ function ShowStudent(props){
 							<option disabled value='default' hidden>Select  a  campus . . .</option>
 
 						</select>
-						<button className='snoc-show-stu-btn'>Add Campus</button>
+						<button onClick = {props.onAddCampusClick} className='snoc-show-stu-btn'>Add Campus</button>
 						</div>
 
 					</div>

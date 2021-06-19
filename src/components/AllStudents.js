@@ -13,9 +13,9 @@ import '../styles/AllStudents.css';
 // import StudentRowList from './components/StudentRowList';
 // import Navbar from './components/Navbar';
 
-let robots2 = [];
-let student = {isOnCampus:false}
-let student2 = {isOnCampus:true}
+// let robots2 = [];
+// let student = {isOnCampus:false}
+// let student2 = {isOnCampus:true}
 
 function AllStudents(props){
 
@@ -27,7 +27,7 @@ function AllStudents(props){
 			<div>
 				<div className='all-stu-btn'>
 					<h1 className='all-stu-title'>All Students</h1>  
-					<button className='add-btn'>Add Student</button>
+					<button onClick= {props.onBtnClick} className='add-btn'>Add Student</button>
 				</div>
 				<StudentCardList students = {props.students}/>
 
@@ -43,7 +43,7 @@ function AllStudents(props){
 				<h1 className='all-stu-title tc'>All Students</h1>  
 				<p className='tc'>There are no students registered in the database.</p>
 				<br/>
-				<button className='add-btn center-btn'>Add Student</button>
+				<button onClick= {props.onBtnClick} className='add-btn center-btn'>Add Student</button>
 
 			</div>
 		)

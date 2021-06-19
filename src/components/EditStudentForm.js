@@ -21,23 +21,23 @@ class EditStudent extends Component{
 					<div className='new-stu-div'>
 
 						<label className = 'new-stu-label' htmlFor='studentname'>Student Name</label>
-						<input className = 'new-stu-input' type='text' name='studentname' />
+						<input placeholder = 'At least 2 chraraters' id='edit-stu-name' className = 'new-stu-input' type='text' name='studentname' />
 
 					</div>
 					<div className='new-stu-div' >
 
 						<label className = 'new-stu-label' htmlFor='gpa'>GPA</label>
-						<input className = 'new-stu-input' type='text' name='gpa' />
+						<input placeholder = 'A number between 0.0 - 4.0'id='edit-stu-gpa'className = 'new-stu-input' type='text' name='gpa' />
 
 					</div>
 					<div className='new-stu-div'>
 
 						<label className = 'new-stu-label' htmlFor='studenturl'>Student URL</label>
-						<input className = 'new-stu-input' type='text' name='studenturl' />
+						<input placeholder = 'leave empty if not available'id='edit-stu-url'className = 'new-stu-input' type='text' name='studenturl' />
 
 					</div>
 					
-		 			<button className = 'new-stu-btn'>Save changes</button>
+		 			<button onClick = {this.props.onSaveChangesClick} className = 'new-stu-btn'>Save changes</button>
 		 		</div>
 	 		</div>
 
