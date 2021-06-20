@@ -22,7 +22,7 @@ class App extends Component {
 	}
 
 	componentDidMount(){
-		fetch('http://localhost:3001/AllStudents')
+		fetch('http://localhost:5000/allStudents')
 		.then(res => res.json())
 		.then(students => this.setState({students}))
 		// .catch(console.log);
@@ -31,7 +31,7 @@ class App extends Component {
 	}
 
 	updateState(){
-		fetch('http://localhost:3001/AllStudents')
+		fetch('http://localhost:5000/allStudents')
 		.then(res => res.json())
 		.then(students => this.setState({students}))
 	}
@@ -39,7 +39,7 @@ class App extends Component {
 	handleOnStudentNavBarClick = () => {
 
 		this.setState({path:'students'})
-		fetch('http://localhost:3001/AllStudents')
+		fetch('http://localhost:5000/allStudents')
 		.then(res => res.json())
 		.then(students => this.setState({students}))
 
@@ -64,7 +64,7 @@ class App extends Component {
 			gpa.style.border = '1px solid red';
 		} else{
 			gpa.style.border = '1px solid blue';
-			fetch('http://localhost:3001/addStudent',{
+			fetch('http://localhost:5000/addStudent',{
 			method: 'post',
 			headers: {'Content-Type' : 'application/json'},
 			body: JSON.stringify({
@@ -105,7 +105,7 @@ class App extends Component {
 			gpa.style.border = '1px solid red';
 		} else{
 			gpa.style.border = '1px solid blue';
-			fetch(`http://localhost:3001/student/${this.state.student.id}/edit`,{
+			fetch(`http://localhost:5000/updateStudent/${this.state.student.id}`,{
 			method: 'put',
 			headers: {'Content-Type' : 'application/json'},
 			body: JSON.stringify({
@@ -129,7 +129,7 @@ class App extends Component {
 	}
 
 	onStudentNameClick = (id) => {
-		fetch(`http://localhost:3001/Student/${id}`)
+		fetch(`http://localhost:5000/student/${id}`)
 		.then(res => res.json())
 		.then(student=> this.setState({student:student[0]}))
 
@@ -141,7 +141,7 @@ class App extends Component {
 
 	handleOnDeleteStudent = async () => {
 
-		await fetch(`http://localhost:3001/removestudent/${this.state.student.id}`, {
+		await fetch(`http://localhost:5000/removeStudent/${this.state.student.id}`, {
 			method: 'delete',
 			headers: {'Content-Type': 'application/json'}
 		})
