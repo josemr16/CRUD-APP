@@ -4,6 +4,7 @@ import AllStudents from './AllStudents';
 import NewStudent from './NewStudentForm';
 import ShowStudent from './ShowStudent';
 import EditStudent from './EditStudentForm';
+import CampusEdit from './CampusEdit';
 
 class App extends Component {
 	constructor(){
