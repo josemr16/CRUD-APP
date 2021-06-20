@@ -27,7 +27,7 @@ class App extends Component {
 		fetch('http://localhost:3001/AllStudents')
 		.then(res => res.json())
 		.then(students => this.setState({students}))
-		// .catch(console.log);
+		
 
 
 		fetch('http://localhost:3001/AllCampuses')
