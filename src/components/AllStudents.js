@@ -29,7 +29,7 @@ function AllStudents(props){
 					<h1 className='all-stu-title'>All Students</h1>  
 					<button onClick= {props.onBtnClick} className='add-btn'>Add Student</button>
 				</div>
-				<StudentCardList students = {props.students}/>
+				<StudentCardList stuId = {props.stuId} students = {props.students}/>
 
 			</div>
 		);

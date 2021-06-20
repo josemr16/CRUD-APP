@@ -12,23 +12,41 @@ class App extends Component {
 		this.state = {
 			students:[],
 			campuses:[],
-			path:'home'
+			path:'home',
+			student:[]
 		}
 
 		this.handleNewStudentForm = this.handleNewStudentForm.bind(this);
 		this.handleEditStudentForm = this.handleEditStudentForm.bind(this);
+		this.updateState = this.updateState.bind(this);
 	}
 
 	componentDidMount(){
-		fetch('http://localhost:3004/AllStudents')
+		fetch('http://localhost:3001/AllStudents')
 		.then(res => res.json())
-		.then(students => this.setState({students:students}))
-		.catch(console.log);
+		.then(students => this.setState({students}))
+		// .catch(console.log);
 
 		console.log(this.state.students);
 	}
 
+	updateState(){
+		fetch('http://localhost:3001/AllStudents')
+		.then(res => res.json())
+		.then(students => this.setState({students}))
+	}
+
+	handleOnStudentNavBarClick = () => {
+
+		this.setState({path:'students'})
+		fetch('http://localhost:3001/AllStudents')
+		.then(res => res.json())
+		.then(students => this.setState({students}))
+
+	}
+
 	handleNewStudentForm(){
+
 		let name = document.querySelector('#new-stu-name');
 		let gpa = document.querySelector('#new-stu-gpa');
 		let url = document.querySelector('#new-stu-url');
@@ -46,12 +64,30 @@ class App extends Component {
 			gpa.style.border = '1px solid red';
 		} else{
 			gpa.style.border = '1px solid blue';
-			// will be making fetch here
+			fetch('http://localhost:3001/addStudent',{
+			method: 'post',
+			headers: {'Content-Type' : 'application/json'},
+			body: JSON.stringify({
+				name:name.value,
+				imageUrl:url.value,
+				gpa:gpa.value
+				
+			})
+		})
+		.then(res => res.json())
+		.then(res=> {
+
+			this.setState({student:res})
 			this.setState({path:'showstudent'})
-		}
- 
+
+		})
+		.catch(err => console.log('Some err '+err));
+
+		}	
 	}
+
 	handleEditStudentForm(){
+
 		let name = document.querySelector('#edit-stu-name');
 		let gpa = document.querySelector('#edit-stu-gpa');
 		let url = document.querySelector('#edit-stu-url');
@@ -69,15 +105,58 @@ class App extends Component {
 			gpa.style.border = '1px solid red';
 		} else{
 			gpa.style.border = '1px solid blue';
-			// will be making fetch here
+			fetch(`http://localhost:3001/student/${this.state.student.id}/edit`,{
+			method: 'put',
+			headers: {'Content-Type' : 'application/json'},
+			body: JSON.stringify({
+				name:name.value,
+				imageUrl:url.value,
+				gpa:gpa.value
+				
+			})
+		})
+		.then(res => res.json())
+		.then(res=> {
+
+			this.setState({student:res})
 			this.setState({path:'showstudent'})
+
+		})
+		.catch(err => console.log('Some err '+err));
+			// this.setState({path:'showstudent'})
 		}
  
 	}
 
-	render(){
+	onStudentNameClick = (id) => {
+		fetch(`http://localhost:3001/Student/${id}`)
+		.then(res => res.json())
+		.then(student=> this.setState({student:student[0]}))
 
-		let student = {isOnCampus:true}
+		this.setState({path:'showstudent'})
+		console.log(this.state.student)
+		
+
+	}
+
+	handleOnDeleteStudent = async () => {
+
+		await fetch(`http://localhost:3001/removestudent/${this.state.student.id}`, {
+			method: 'delete',
+			headers: {'Content-Type': 'application/json'}
+		})
+
+		this.updateState();
+		this.setState({path:'students'});
+	}
+
+	render(){
+		
+		// fetch('http://localhost:3001/AllStudents')
+		// .then(res => res.json())
+		// .then(students => this.setState({students}))
+
+		// let student = {isOnCampus:true}
 
 		// console.log(this.state.path)
 
@@ -89,9 +168,12 @@ class App extends Component {
 				<div>
 					<AllStudents 
 					onBtnClick = {()=>this.setState({path:'newstudent'})} 
-					students = {[1]} />
+					students = { this.state.students} 
+					stuId = {this.onStudentNameClick} />
 				</div>
+
 			);
+			// ()=> this.updateState()
 			break
 
 			case 'newstudent':
@@ -107,8 +189,9 @@ class App extends Component {
 			component = (
 				<div>
 					<ShowStudent 
-					student = {student} 
-					onEditClick = {()=>this.setState({path:'editstudent'})} />
+					student = {this.state.student} 
+					onEditClick = {()=>this.setState({path:'editstudent'})}
+					onDeleteClick = {this.handleOnDeleteStudent}/>
 				</div>
 			);
 			break
@@ -133,7 +216,7 @@ class App extends Component {
 				<Navbar 
 				onHomeClick ={()=>this.setState({path:'home'})}
 				onCampusesClick ={''}
-				onStudentsClick ={()=>this.setState({path:'students'})} />
+				onStudentsClick ={this.handleOnStudentNavBarClick} />
 				{component}
 
 			</div>

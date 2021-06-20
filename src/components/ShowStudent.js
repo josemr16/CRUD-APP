@@ -3,15 +3,15 @@ import '../styles/ShowStudent.css';
 function ShowStudent(props){
 
 	let component;
-	if(props.student.isOnCampus){
+	if(props.student.CampuseId !== null){
 		component = (
 
 			<div>
 				<div className='show-stu-container'>
 					<img className='show-stu-img' src='https://st.depositphotos.com/1779253/5140/v/600/depositphotos_51405259-stock-illustration-male-avatar-profile-picture-use.jpg' alt='student'/>
 					<div className='show-stu-items'>
-						<h1>Student name</h1>
-						<span>GPA: 3.4</span>
+						<h1>{props.student.name}</h1>
+						<span>{props.student.gpa}</span>
 						<div className='show-stu-btns'>
 							<button onClick = {props.onEditClick} className='show-stu-btn show-stu-edit'>edit</button>
 							<button onClick = {props.onDeleteClick} className='show-stu-btn show-stu-del'>delete</button>
@@ -47,8 +47,8 @@ function ShowStudent(props){
 				<div className='show-stu-container'>
 					<img className='show-stu-img' src='https://st.depositphotos.com/1779253/5140/v/600/depositphotos_51405259-stock-illustration-male-avatar-profile-picture-use.jpg' alt='student'/>
 					<div className='show-stu-items'>
-						<h1>Student name</h1>
-						<span>GPA: 3.4</span>
+						<h1>{props.student.name}</h1>
+						<span>{props.student.gpa}</span>
 						<div className='show-stu-btns'>
 							<button onClick = {props.onEditClick} className='show-stu-btn show-stu-edit'>edit</button>
 							<button onClick = {props.onDeleteClick} className='show-stu-btn show-stu-del'>delete</button>

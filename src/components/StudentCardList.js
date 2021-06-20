@@ -7,7 +7,7 @@ function StudentCardList(props){
 
 		return(
 			<div>
-				<StudentCard key={i} />
+				<StudentCard onNameClick ={()=> props.stuId(student.id)} name={student.name} key={student.id} />
 			</div>
 			);
 
