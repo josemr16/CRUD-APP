@@ -9,18 +9,18 @@ function CampusList(props){
         component = (
             props.campuses.map((campus,i) => {
                 return(
-                    <div className='campuslist-container'>
+                    <div key={campus.id} className='campuslist-container'>
 
                         <div>
-                            <img className="building-image"alt="image-test" src="https://images.skyscrapercenter.com/building/east53rdst100seagram-1b.jpg"></img>
+                            <img className="building-image"alt="campus" src="https://images.skyscrapercenter.com/building/east53rdst100seagram-1b.jpg"></img>
                         </div>
 
                         <div>
-                            <h2 className="campus-name">Campus Name</h2>
-                            <h4 className="count-students">num + Students</h4>
+                            <h2 onClick={()=>props.onNameClick(campus.id)} className="campus-name">{`name:${campus.name}`}</h2>
+                            <h4 className="count-students">{`num + Students`}</h4>
 
-                            <button className="cardlist-edit-button">edit</button>
-                            <button className="cardlist-delete-button">delete</button>
+                            <button onClick = {()=>props.onCampusEditClick(campus.id)} className="cardlist-edit-button">edit</button>
+                            <button onClick = {()=>props.onCampusDeleteClick(campus.id)}className="cardlist-delete-button">delete</button>
                         </div>
 
                     </div>

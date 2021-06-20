@@ -4,6 +4,8 @@ import AllStudents from './AllStudents';
 import NewStudent from './NewStudentForm';
 import ShowStudent from './ShowStudent';
 import EditStudent from './EditStudentForm';
+import AllCampuses from './AllCampuses';
+import NewCampusForm from './NewCampusForm';
 
 class App extends Component {
 	constructor(){
@@ -27,7 +29,12 @@ class App extends Component {
 		.then(students => this.setState({students}))
 		// .catch(console.log);
 
-		console.log(this.state.students);
+
+		fetch('http://localhost:3001/AllCampuses')
+		.then(res => res.json())
+		.then(campuses => this.setState({campuses}))
+
+		// console.log(this.state.students);
 	}
 
 	updateState(){
@@ -39,10 +46,42 @@ class App extends Component {
 	handleOnStudentNavBarClick = () => {
 
 		this.setState({path:'students'})
-		fetch('http://localhost:3001/AllStudents')
-		.then(res => res.json())
-		.then(students => this.setState({students}))
+		this.updateState()
+		// fetch('http://localhost:3001/AllStudents')
+		// .then(res => res.json())
+		// .then(students => this.setState({students}))
 
+	}
+
+	handleOnCampusesNavBarClick = () => {
+
+		this.setState({path:'allcampuses'})
+		// fetch('http://localhost:3001/AllStudents')
+		// .then(res => res.json())
+		// .then(students => this.setState({students}))
+
+	}
+
+	handleNewCampusForm = () => {
+		let name = document.querySelector('#nc-name').value;
+		let location = document.querySelector('#nc-location').value;
+		let imageUrl = document.querySelector('#nc-url').value;
+		let description = document.querySelector('#nc-description').value;
+		// console.log(name, location, imageUrl, description);
+
+	}
+
+	onCampusNameClick = (id) => {
+
+		console.log(id);
+	}
+
+	handleOnCampusEditClick = (id) => {
+		console.log(id)
+	}
+
+	handleOnCampusDeleteClick = (id) => {
+		console.log(id)
 	}
 
 	handleNewStudentForm(){
@@ -151,14 +190,6 @@ class App extends Component {
 	}
 
 	render(){
-		
-		// fetch('http://localhost:3001/AllStudents')
-		// .then(res => res.json())
-		// .then(students => this.setState({students}))
-
-		// let student = {isOnCampus:true}
-
-		// console.log(this.state.path)
 
 		let component;
 
@@ -203,6 +234,25 @@ class App extends Component {
 					</div>
 				);
 			break
+			case 'allcampuses':
+			component = (
+				<div>
+					<AllCampuses campuses = {this.state.campuses}
+					onAddCampusClick={()=>this.setState({path:'newcampus'})}
+					onCampusNameClick={this.onCampusNameClick}
+					onCampusEditClick ={this.handleOnCampusEditClick}
+					onCampusDeleteClick ={this.handleOnCampusDeleteClick}/>
+				</div>
+			);
+			break
+			case 'newcampus':
+			component= (
+				<div>
+					<NewCampusForm 
+					onAddCampusClick = {this.handleNewCampusForm}/>
+				</div>
+			);
+			break
 			default:
 				component = (
 					<div>
@@ -215,7 +265,7 @@ class App extends Component {
 			<div>
 				<Navbar 
 				onHomeClick ={()=>this.setState({path:'home'})}
-				onCampusesClick ={''}
+				onCampusesClick ={this.handleOnCampusesNavBarClick}
 				onStudentsClick ={this.handleOnStudentNavBarClick} />
 				{component}
 

@@ -4,14 +4,14 @@ import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 import App from './components/App';
-import AllCampuses from './components/AllCampuses';
-import CampusList from './components/CampusList';
+// import AllCampuses from './components/AllCampuses';
+// import CampusList from './components/CampusList';
 
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <AllCampuses campuses = {[1,2,3,4]}/>
+    
  {/*   <CampusList campuses = {[]}/>*/}
    
   </React.StrictMode>,
