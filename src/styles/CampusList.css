@@ -13,6 +13,7 @@
     margin: 10px;
 }
 .campus-name{
+    cursor: pointer;
     margin: auto;
     font-size: 30px;
     text-align:left;

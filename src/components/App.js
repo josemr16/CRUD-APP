@@ -6,6 +6,9 @@ import ShowStudent from './ShowStudent';
 import EditStudent from './EditStudentForm';
 import AllCampuses from './AllCampuses';
 import NewCampusForm from './NewCampusForm';
+import ShowCampus from './CampusNoStudents';
+import StudentsOnCampus from './StudentsOnCampus';
+import EditCampus from './EditCampus';
 
 class App extends Component {
 	constructor(){
@@ -15,7 +18,8 @@ class App extends Component {
 			students:[],
 			campuses:[],
 			path:'home',
-			student:[]
+			student:[],
+			campus:[]
 		}
 
 		this.handleNewStudentForm = this.handleNewStudentForm.bind(this);
@@ -41,6 +45,10 @@ class App extends Component {
 		fetch('http://localhost:3001/AllStudents')
 		.then(res => res.json())
 		.then(students => this.setState({students}))
+
+		fetch('http://localhost:3001/AllCampuses')
+		.then(res => res.json())
+		.then(campuses => this.setState({campuses}))
 	}
 
 	handleOnStudentNavBarClick = () => {
@@ -62,26 +70,87 @@ class App extends Component {
 
 	}
 
-	handleNewCampusForm = () => {
+	handleNewCampusForm = async() => {
 		let name = document.querySelector('#nc-name').value;
-		let location = document.querySelector('#nc-location').value;
+		let address = document.querySelector('#nc-location').value;
 		let imageUrl = document.querySelector('#nc-url').value;
 		let description = document.querySelector('#nc-description').value;
 		// console.log(name, location, imageUrl, description);
 
+		await fetch('http://localhost:3001/addCampus', {
+			method: 'post',
+			headers: {'Content-Type':'application/json'},
+			body: JSON.stringify({
+				name:name,
+				address:address,
+				description:description
+			})
+		})
+		.then(res => res.json())
+		.then(campus => {
+
+			this.setState({campus:campus})
+			this.updateState()
+			this.setState({path:'allcampuses'})
+		})
+		.catch(err => console.log('Some err '+ err));
+	}
+
+	handleEditCampusForm = async() => {
+		let name = document.querySelector('#ec-name').value;
+		let address = document.querySelector('#ec-location').value;
+		let imageUrl = document.querySelector('#ec-url').value;
+		let description = document.querySelector('#ec-description').value;
+		// console.log(name, location, imageUrl, description);
+
+		await fetch(`http://localhost:3001/campus/${this.state.campus.id}/edit`, {
+			method: 'put',
+			headers: {'Content-Type':'application/json'},
+			body: JSON.stringify({
+				name:name,
+				address:address,
+				description:description
+			})
+		})
+		.then(res => res.json())
+		.then(campus => {
+
+			this.setState({campus:campus})
+			this.updateState()
+			this.setState({path:'allcampuses'})
+		})
+		.catch(err => console.log('Some err '+ err));
+		// console.log(this.state.campus)
 	}
 
 	onCampusNameClick = (id) => {
+		fetch(`http://localhost:3001/campus/${id}`)
+		.then(res => res.json())
+		.then(campus=> this.setState({campus:campus[0]}))
 
-		console.log(id);
+		this.setState({path:'showcampus'})
+		console.log(this.state.campus)
 	}
 
 	handleOnCampusEditClick = (id) => {
-		console.log(id)
+		fetch(`http://localhost:3001/campus/${id}`)
+		.then(res => res.json())
+		.then(campus=> this.setState({campus:campus[0]}))
+
+		this.setState({path:'editcampus'})
+		// console.log(this.state.campus)
+		// console.log(id)
 	}
 
-	handleOnCampusDeleteClick = (id) => {
-		console.log(id)
+	handleOnCampusDeleteClick = async(id) => {
+
+		
+		await fetch(`http://localhost:3001/removecampus/${id}`, {
+		method: 'delete',
+		headers: {'Content-Type': 'application/json'}
+		})
+	
+		this.updateState()
 	}
 
 	handleNewStudentForm(){
@@ -251,6 +320,23 @@ class App extends Component {
 					<NewCampusForm 
 					onAddCampusClick = {this.handleNewCampusForm}/>
 				</div>
+			);
+			break
+			case 'showcampus':
+			component = (
+				<div>
+					<ShowCampus campus={this.state.campus} />
+					<StudentsOnCampus students={[]}/>
+
+				</div>
+			);
+			break
+			case 'editcampus':
+			component = (
+					<div>
+						<EditCampus 
+						onSaveChangesClick = {this.handleEditCampusForm}/>
+					</div>
 			);
 			break
 			default:

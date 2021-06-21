@@ -1,4 +1,6 @@
-
+.soc-container{
+	margin: auto 100px;
+}
 .soc-title-btn{
 	display: flex;
 	justify-content: space-between;
