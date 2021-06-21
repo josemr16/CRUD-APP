@@ -1,5 +1,6 @@
 .container{
-	background-color: #b3b2af;
+	background-color: #e6e8e8;
+	/*background-color: #b3b2af;*/
 	display: flex;
 	justify-content: space-between;
 	padding: 10px 0px;
@@ -15,6 +16,12 @@ li {
 	display: inline-block;
 	margin-right: 25px;
 	cursor: pointer;
+	font-size: 25px;
+	font-family: calibri;
+}
+
+li:hover{
+	text-decoration: underline;
 }
 
 .nav-margin {
@@ -23,4 +30,9 @@ li {
 
 span {
 	cursor: pointer;
+	font-size: 25px;
+	font-family: calibri;
+}
+span:hover{
+	text-decoration: underline;
 }

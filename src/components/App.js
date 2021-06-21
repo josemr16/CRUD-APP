@@ -153,6 +153,28 @@ class App extends Component {
 		this.updateState()
 	}
 
+	handleShowCampusDeleteClick = async() => {
+
+		
+		await fetch(`http://localhost:3001/removecampus/${this.state.campus.id}`, {
+		method: 'delete',
+		headers: {'Content-Type': 'application/json'}
+		})
+	
+		this.updateState()
+		this.setState({path:'allcampuses'})
+	}
+
+	handleShowCampusEditClick = () => {
+		fetch(`http://localhost:3001/campus/${this.state.campus.id}`)
+		.then(res => res.json())
+		.then(campus=> this.setState({campus:campus[0]}))
+
+		this.setState({path:'editcampus'})
+		// console.log(this.state.campus)
+		// console.log(id)
+	}
+
 	handleNewStudentForm(){
 
 		let name = document.querySelector('#new-stu-name');
@@ -325,7 +347,10 @@ class App extends Component {
 			case 'showcampus':
 			component = (
 				<div>
-					<ShowCampus campus={this.state.campus} />
+					<ShowCampus 
+					campus={this.state.campus}
+					onEditShowCampus = {this.handleShowCampusEditClick}
+					onDeleteShowCampus= {this.handleShowCampusDeleteClick}/>
 					<StudentsOnCampus students={[]}/>
 
 				</div>

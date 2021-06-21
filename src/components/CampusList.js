@@ -9,20 +9,22 @@ function CampusList(props){
         component = (
             props.campuses.map((campus,i) => {
                 return(
-                    <div key={campus.id} className='campuslist-container'>
+                    <div key={campus.id}>
+                        <div  className='campuslist-container'>
 
-                        <div>
-                            <img className="building-image"alt="campus" src="https://images.skyscrapercenter.com/building/east53rdst100seagram-1b.jpg"></img>
+                            <div>
+                                <img className="building-image"alt="campus" src="https://images.skyscrapercenter.com/building/east53rdst100seagram-1b.jpg"></img>
+                            </div>
+
+                            <div>
+                                <h2 onClick={()=>props.onNameClick(campus.id)} className="campus-name pointer">{`${campus.name}`}</h2>
+                                <h4 className="count-students">{`#students`}</h4>
+
+                                <button onClick = {()=>props.onCampusEditClick(campus.id)} className="cardlist-edit-button">edit</button>
+                                <button onClick = {()=>props.onCampusDeleteClick(campus.id)}className="cardlist-delete-button">delete</button>
+                            </div>
+
                         </div>
-
-                        <div>
-                            <h2 onClick={()=>props.onNameClick(campus.id)} className="campus-name">{`name:${campus.name}`}</h2>
-                            <h4 className="count-students">{`num + Students`}</h4>
-
-                            <button onClick = {()=>props.onCampusEditClick(campus.id)} className="cardlist-edit-button">edit</button>
-                            <button onClick = {()=>props.onCampusDeleteClick(campus.id)}className="cardlist-delete-button">delete</button>
-                        </div>
-
                     </div>
                 )
             })
@@ -38,7 +40,7 @@ function CampusList(props){
 
     return(
         <div>
-            <div className = 'all-cam-container'>
+            <div className = 'cl-flex'>
                 {component}
             </div>
         </div>

@@ -14,7 +14,7 @@ function AllCampuses(props){
     return(
         <div>
             <div className='campuses-container'>
-                <h1 className='all-campus-title'>ALL CAMPUSES</h1>
+                <h1 className='all-campus-title'>All Campuses</h1>
                 <button onClick={props.onAddCampusClick} className='add-campus-btn'>ADD CAMPUS</button> 
             </div>
             <CampusList 

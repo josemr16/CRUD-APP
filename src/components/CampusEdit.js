@@ -3,7 +3,7 @@ import '../styles/CampusEdit.css';
 function CampusEdit(props){
     return(
         <div>
-            <div className="card-edit-border">
+ {/*           <div className="card-edit-border">
                 <h1 className="card-title">EDIT CAMPUS</h1>
                     <div className='card-container'>
 
@@ -34,7 +34,7 @@ function CampusEdit(props){
                             </div>
                             <button className="add-student">Add to Campus</button>
                         </div>
-                    </div>
+                    </div>*/}
                 </div>
              );
 }
